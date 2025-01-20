@@ -48,7 +48,7 @@ def browser_init(context, scenario_name):
     bstack_options = {
         "os" : "OS X",
         "osVersion" : "Monterey",
-        'browserName': 'Safari',
+        'browserName': 'Edge',
         'sessionName': scenario_name
     }
     options.set_capability('bstack:options', bstack_options)
