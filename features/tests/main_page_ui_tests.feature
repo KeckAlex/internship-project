@@ -8,4 +8,4 @@ Feature: Main Page UI tests
     And Verify the right market-companies page opens
     And Click on “Add Company” button
     And Verify the right for-the-agency page opens
-    And Verify the btn "Publish my company" is clickable
+    And Verify the buttons "Publish my company" are clickable

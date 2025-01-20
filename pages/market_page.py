@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from time import sleep
 
 from pages.base_page import Page
 
@@ -15,11 +16,12 @@ class MarketPage(Page):
         self.driver = driver
 
     def verify_page(self, part_url):
+        sleep(3)
         self.verify_partial_url(part_url)
 
     def add_company_btn(self):
         self.find_element(*self.ADD_CO).click()
 
-    def verify_btn(self):
+    def verify_buttons(self):
         self.wait_to_be_clickable(*self.PUBLISH_BTN_1)
         self.wait_to_be_clickable(*self.PUBLISH_BTN_2)

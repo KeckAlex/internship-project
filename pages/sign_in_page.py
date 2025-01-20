@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import Page
+from time import sleep
 
 
 class SignInPage(Page):
@@ -16,9 +17,12 @@ class SignInPage(Page):
         self.verify_partial_text(self.TEXT, *self.SIGN_IN_TXT)
 
     def enter_email(self):
+        # sleep(3)
+        self.wait_for_element_appear(*self.EMAIL_FIELD)
         self.input_text(self.EMAIL, *self.EMAIL_FIELD)
 
     def enter_password(self):
+        self.wait_for_element_appear(*self.PASSWORD_FIELD)
         self.input_text(self.PASSWORD, *self.PASSWORD_FIELD)
 
     def click_login(self):
