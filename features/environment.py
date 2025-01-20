@@ -22,16 +22,16 @@ def browser_init(context):
     # context.driver = webdriver.Firefox(service=service)
 
     ### SAFARI ###
-    context.driver = webdriver.Safari()
+    # context.driver = webdriver.Safari()
 
     ### HEADLESS MODE ####
-    # options = webdriver.ChromeOptions()
-    # options.add_argument('headless')
-    # service = Service(ChromeDriverManager().install())
-    # context.driver = webdriver.Chrome(
-    #     options=options,
-    #     service=service
-    # )
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    service = Service(ChromeDriverManager().install())
+    context.driver = webdriver.Chrome(
+        options=options,
+        service=service
+    )
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
