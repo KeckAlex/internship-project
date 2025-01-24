@@ -9,3 +9,10 @@ Feature: Main Page UI tests
     And Click on “Add Company” button
     And Verify the right for-the-agency page opens
     And Verify the buttons "Publish my company" are clickable
+
+
+
+#            "os" : "OS X",
+#        "osVersion" : "Monterey",
+#        'browserName': 'Edge',
+#        'sessionName': scenario_name
